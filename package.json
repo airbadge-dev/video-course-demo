@@ -1,0 +1,41 @@
+{
+  "name": "airbadge-sveltekit-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names 'DEV,STRIPE' -c 'bgBlue.bold,bgMagenta.bold' 'vite dev' 'npm run stripe:listen'",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "postinstall": "prisma generate",
+    "stripe:listen": "stripe listen --forward-to localhost:5173/billing/webhooks"
+  },
+  "devDependencies": {
+    "@airbadge/cli": "^0.0.1",
+    "@airbadge/sveltekit": "^0.0.10",
+    "@auth/prisma-adapter": "^2.1.0",
+    "@auth/sveltekit": "^1.1.0",
+    "@prisma/client": "^5.9.1",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/eslint": "8.56.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "http-status-emojis": "^2.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-svelte": "^3.1.2",
+    "prisma": "^5.9.1",
+    "stripe": "^15.6.0",
+    "svelte": "^4.2.7",
+    "vite": "^5.0.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sentry/sveltekit": "^7.105.0",
+    "@sentry/utils": "^7.105.0"
+  }
+}

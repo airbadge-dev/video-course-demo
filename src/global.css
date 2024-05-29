@@ -1,0 +1,38 @@
+body {
+  padding: 10px 15px;
+  font-family: 'Barlow', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: Inter, sans-serif;
+}
+
+h1 {
+  letter-spacing: -0.04em;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.btn {
+  background: #ada9dd;
+  color: #222;
+  padding: 8px 13px;
+  text-decoration: none;
+  border-radius: 5px;
+  place-self: center;
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  gap: 15px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #222;
+    color: #eee;
+    scale: 1.05;
+  }
+}
