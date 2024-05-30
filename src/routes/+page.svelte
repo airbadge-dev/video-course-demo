@@ -6,16 +6,18 @@
 
 {#each videos as video}
   <section>
-    <h2>{video.title}</h2>
+    <hgroup>
+      <h2>{video.title}</h2>
+      <span class="price">${video.price / 100}</span>
+    </hgroup>
 
     {#if session?.purchases.includes(video.id)}
-      <a class="btn" href="/watch/{video.id}">🍿 Watch</a>
+      <a class="btn" href="/watch/{video.id}">
+        🍿 Watch
+      </a>
     {:else}
       <a class="btn" href="/billing/checkout?id={video.id}">
-        <span>💳</span>
-        <span>Buy Now</span>
-        <span>|</span>
-        <span>${video.price / 100}</span>
+        💳 Buy Now
       </a>
     {/if}
 
@@ -32,8 +34,15 @@
     margin-bottom: 5rem;
   }
 
-  h2 {
+  hgroup {
     grid-column: 1 / 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price {
+    font-size: 28px;
   }
 
   img {
