@@ -6,7 +6,7 @@ AirBadge handles the sign up flow via [Auth.js](https://authjs.dev) and the paym
 
 Here, the example is selling video courses. The videos are hosted privately on [Cloudflare Stream](https://developers.cloudflare.com/stream/) and are only accessible to paid customers. Once the customer pays, a signed url is generated for the video stream on the server-side.
 
-See [Getting Started Guide](https://docs.airbadge.dev/getting-started) for step-by-step setup instructions.
+See AirBadge's [Getting Started Guide](https://docs.airbadge.dev/getting-started) for step-by-step setup instructions.
 
 ## License
 
