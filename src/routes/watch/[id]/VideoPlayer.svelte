@@ -1,3 +1,7 @@
+<!--
+  Video player is based on Video.js.
+  The video.js script is loaded from CDN in src/app.html
+-->
 <script>
   import { onMount } from 'svelte'
 
